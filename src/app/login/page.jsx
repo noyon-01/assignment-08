@@ -13,7 +13,6 @@ export default function Login() {
     const { data, error } = await authClient.signIn.email({
       email,
       password,
-      rememberMe: true,
       callbackURL: "/",
     });
 

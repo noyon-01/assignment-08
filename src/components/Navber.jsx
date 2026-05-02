@@ -101,8 +101,8 @@ export default function Navber() {
                   <Image
                     src={user.image}
                     alt={user.name}
-                    height={50}
-                    width={50}
+                    height={100}
+                    width={100}
                     referrerPolicy="no-referrer"
                   />
                 </div>
