@@ -21,7 +21,7 @@ export default function UpdateUserModal() {
         className="btn"
         onClick={() => document.getElementById("my_modal_2").showModal()}
       >
-        <FaUserPen /> Update User
+        <FaUserPen /> Update Profile
       </button>
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box max-w-96 bg-base-200">

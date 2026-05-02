@@ -1,5 +1,6 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
@@ -25,7 +26,7 @@ export default function Signup() {
 
     if (data) {
       toast.success("User is Successfully Signup Now!");
-      router.push("/");
+      router.push("/login");
     }
   };
 
@@ -85,9 +86,6 @@ export default function Signup() {
 
         <button className="btn btn-neutral mt-4" type="submit">
           Register
-        </button>
-        <button className="btn btn-ghost mt-1" type="reset">
-          Reset
         </button>
       </form>
     </div>
