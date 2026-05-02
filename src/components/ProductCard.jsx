@@ -4,8 +4,8 @@ import { IoMdStar } from "react-icons/io";
 
 export default async function ProductCard({ product }) {
   return (
-    <div>
-      <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="flex flex-col items-center">
+      <div className="card bg-base-100 w-96 lg:w-85 xl:w-96 shadow-xl p-3">
         <figure className="aspect-square">
           <Image
             src={product.image}
@@ -16,8 +16,8 @@ export default async function ProductCard({ product }) {
         </figure>
         <div className="card-body bg-base-200">
           <p className="text-[#093C5D]">{product.category}</p>
-          <h2 className="card-title text-2xl font-bold">{product.name}</h2>
-          <div className="flex justify-between items-center gap-58">
+          <h2 className="card-title text-xl font-bold">{product.name}</h2>
+          <div className="flex justify-between items-center gap-48 lg:gap-38">
             <p className="text-2xl font-semibold flex items-center">
               {product.rating}
               <span className="text-[#FFA02E]">

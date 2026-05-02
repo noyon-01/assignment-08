@@ -12,14 +12,14 @@ export default async function ProductDetails({ params }) {
   );
 
   return (
-    <div className="max-w-4xl mx-auto rounded-xl shadow-xl p-10 my-20 bg-base-200 flex justify-center items-center gap-10">
+    <div className="max-w-4xl mx-auto rounded-xl shadow-xl p-10 my-20 bg-base-200 flex flex-col md:flex-row justify-center items-center gap-5 md:gap-10">
       <div>
         <figure className="aspect-square">
           <Image
             className="rounded-2xl"
             src={findProduct.image}
             alt={findProduct.name}
-            height={10}
+            height={200}
             width={400}
           />
         </figure>

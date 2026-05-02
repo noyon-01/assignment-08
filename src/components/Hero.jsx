@@ -7,8 +7,6 @@ export default function Hero() {
     <div>
       <div className="bg-base-200 py-5 md:py-25 px-5 md:px-7 lg:px-30">
         <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-          
-          {/* LEFT CONTENT */}
           <div className="animate__animated animate__fadeInLeft">
             <div className="badge badge-warning bg-[#FFA02E] text-gray-900 text-md font-bold mb-4 animate__animated animate__bounceInDown">
               Summer Sale 2025
@@ -37,7 +35,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* RIGHT IMAGE */}
           <div className="animate__animated animate__fadeInRight animate__delay-1s">
             <Image
               className="md:w-72 lg:w-96 animate__animated animate__float"

@@ -5,10 +5,12 @@ import cap from "@/assets/cap.jpg";
 
 export default function SummerTips() {
   return (
-    <div className="container mx-auto bg-[#EFE3CA] my-5 md:my-20 py-10 md:px-30 rounded-xl">
-      <h1 className="text-4xl font-bold mb-10 text-center md:text-left">Summer Care Tips</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-10 text-center">
-        <div className="bg-base-200 rounde-xl shadow p-10 rounded-xl">
+    <div className="container mx-auto bg-[#EFE3CA] my-5 md:my-20 py-10 md:px-10 xl:px-30 rounded-xl flex flex-col items-center">
+      <h1 className="text-4xl font-bold mb-10 text-center md:text-left">
+        Summer Care Tips
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 xl:gap-10 text-center">
+        <div className="bg-base-200 rounde-xl shadow pb-5 md:p-5 xl:p-10 rounded-xl">
           <Image
             className="rounded-xl"
             src={water}
@@ -21,7 +23,7 @@ export default function SummerTips() {
             Drink 8+ glasses of water daily to beat the heat
           </p>
         </div>
-        <div className="bg-base-200 rounde-xl shadow p-10 rounded-xl">
+        <div className="bg-base-200 rounde-xl shadow md:p-5 xl:p-10 rounded-xl">
           <Image
             className="rounded-xl"
             src={creame}
@@ -34,7 +36,7 @@ export default function SummerTips() {
             Apply SPF 30+ sunscreen every 2 hours outdoors
           </p>
         </div>
-        <div className="bg-base-200 rounde-xl shadow p-10 rounded-xl">
+        <div className="bg-base-200 rounde-xl shadow md:p-5 xl:p-10 rounded-xl">
           <Image
             className="rounded-xl"
             src={cap}
