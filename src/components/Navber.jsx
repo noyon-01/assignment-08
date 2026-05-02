@@ -1,9 +1,17 @@
 "use client";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function Navber() {
   const pathName = usePathname();
+  const userData = authClient.useSession();
+  const user = userData?.data?.user;
+
+  const handleLogout = async () => {
+    await authClient.signOut();
+  };
 
   const link = (
     <>
@@ -71,18 +79,42 @@ export default function Navber() {
           <ul className="menu menu-horizontal px-1">{link}</ul>
         </div>
         <div className="navbar-end flex gap-2">
-          <Link
-            href={"/login"}
-            className="btn btn-outline rounded-3xl border-[#FFA02E] text-[#FFA02E] font-bold"
-          >
-            Login
-          </Link>
-          <Link
-            href={"/logout"}
-            className="btn btn-outline rounded-3xl border-[#FFA02E] text-[#FFA02E] font-bold"
-          >
-            Logout
-          </Link>
+          {!user ? (
+            <>
+              <Link
+                href={"/login"}
+                className="btn btn-outline rounded-3xl border-[#FFA02E] text-[#FFA02E] font-bold"
+              >
+                Login
+              </Link>
+              <Link
+                href={"/signup"}
+                className="btn btn-outline rounded-3xl border-[#FFA02E] text-[#FFA02E] font-bold"
+              >
+                SignUp
+              </Link>
+            </>
+          ) : (
+            <div>
+              <div className="avatar">
+                <div className="ring-primary ring-offset-base-100 w-9 rounded-full ring-2 ring-offset-2">
+                  <Image
+                    src={user.image}
+                    alt={user.name}
+                    height={50}
+                    width={50}
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              </div>
+              <button
+                onClick={handleLogout}
+                className="btn btn-outline rounded-3xl border-[#FFA02E] text-[#FFA02E] font-bold ml-3"
+              >
+                Logout
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

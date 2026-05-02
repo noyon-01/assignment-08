@@ -26,6 +26,12 @@ export default function Login() {
     }
   };
 
+  const handleGooogleSignin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div className="flex justify-center items-center my-36">
       <form
@@ -60,7 +66,7 @@ export default function Login() {
           Login
         </button>
         <div className="divider">OR</div>
-        <button className="btn btn-soft">
+        <button onClick={handleGooogleSignin} className="btn btn-soft">
           <FaGoogle /> Login With Google
         </button>
         <p className="text-center text-[14px]">
