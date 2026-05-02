@@ -6,8 +6,8 @@ export default async function Products() {
 
   return (
     <div className="max-w-7xl mx-auto my-10">
-      <h1 className="text-4xl font-bold mb-5">All Products</h1>
-      <div className="grid grid-cols-3 gap-10">
+      <h1 className="text-4xl font-bold mb-5 text-center md:text-left">All Products</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
         {data.products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

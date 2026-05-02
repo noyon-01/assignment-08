@@ -5,9 +5,9 @@ import cap from "@/assets/cap.jpg";
 
 export default function SummerTips() {
   return (
-    <div className="container mx-auto bg-[#EFE3CA] my-20 py-10 px-30 rounded-xl">
-      <h1 className="text-4xl font-bold mb-10">Summer Care Tips</h1>
-      <div className="grid grid-cols-3 gap-10 text-center">
+    <div className="container mx-auto bg-[#EFE3CA] my-5 md:my-20 py-10 md:px-30 rounded-xl">
+      <h1 className="text-4xl font-bold mb-10 text-center md:text-left">Summer Care Tips</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-10 text-center">
         <div className="bg-base-200 rounde-xl shadow p-10 rounded-xl">
           <Image
             className="rounded-xl"
