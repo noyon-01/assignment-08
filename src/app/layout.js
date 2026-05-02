@@ -1,6 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from "react-toastify";
+import Navber from "@/components/Navber";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light" className={`h-full antialiased`}>
       <body className={`${outfit.className} min-h-full flex flex-col`}>
+        <Navber/>
         <main className="container mx-auto">{children}</main>
         <ToastContainer />
       </body>
